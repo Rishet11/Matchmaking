@@ -110,6 +110,5 @@ def index():
                          top_freelancers=None)
 
 if __name__ == "__main__":
-    if freelancer_df is None:
-        print("Warning: Could not load freelancer database. Application may not function correctly.")
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)

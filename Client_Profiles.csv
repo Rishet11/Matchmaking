@@ -1,0 +1,101 @@
+name,project_requirements,preferred_style,project_duration_days,budget_usd
+C000,"Color Grading, Text Animation",Cinematic,7,1000
+C001,"Motion Graphics, Premiere Pro",Cinematic,14,250
+C002,Premiere Pro,Corporate,45,1000
+C003,"Slow Motion, Final Cut Pro, Transitions",Vlog,14,750
+C004,"Text Animation, Transitions, Cinematic",Fast-Cut,30,500
+C005,"VFX, Cinematic",Fast-Cut,14,250
+C006,"Slow Motion, Motion Graphics, Color Grading",Cinematic,14,100
+C007,Transitions,Viral,45,100
+C008,"Transitions, VFX, Motion Graphics",Corporate,14,750
+C009,Text Animation,Corporate,14,750
+C010,"Slow Motion, Premiere Pro",Vlog,7,750
+C011,"VFX, Color Grading, Text Animation",Viral,30,250
+C012,"Final Cut Pro, Text Animation",Cinematic,30,250
+C013,"Text Animation, Slow Motion, Cinematic",Viral,45,100
+C014,"Motion Graphics, Transitions, Premiere Pro",Cinematic,45,1000
+C015,"Cinematic, VFX, Slow Motion",Cinematic,45,1000
+C016,"Text Animation, Color Grading, Premiere Pro",Cinematic,30,100
+C017,"VFX, Transitions, Cinematic",Corporate,7,750
+C018,"VFX, Motion Graphics, After Effects",Viral,7,250
+C019,"VFX, Motion Graphics",Vlog,7,250
+C020,"Final Cut Pro, Transitions",Viral,14,750
+C021,"Motion Graphics, Cinematic, Slow Motion",Fast-Cut,45,750
+C022,Color Grading,Corporate,45,500
+C023,"Final Cut Pro, Slow Motion",Cinematic,7,250
+C024,"Cinematic, Text Animation",Viral,30,100
+C025,"VFX, Premiere Pro",Fast-Cut,30,250
+C026,"Cinematic, Premiere Pro, Text Animation",Corporate,30,500
+C027,"Premiere Pro, Color Grading",Corporate,45,100
+C028,"After Effects, Transitions, Text Animation",Vlog,14,250
+C029,"Transitions, Cinematic",Corporate,30,100
+C030,"After Effects, Text Animation, Cinematic",Viral,14,250
+C031,Color Grading,Vlog,7,500
+C032,"Motion Graphics, Final Cut Pro",Viral,45,1000
+C033,Motion Graphics,Corporate,7,1000
+C034,"VFX, Color Grading",Corporate,30,100
+C035,Text Animation,Fast-Cut,30,100
+C036,Premiere Pro,Cinematic,30,250
+C037,Cinematic,Viral,7,500
+C038,"Premiere Pro, Transitions, Cinematic",Fast-Cut,30,250
+C039,"Premiere Pro, Transitions, VFX",Vlog,45,1000
+C040,"Transitions, Premiere Pro",Corporate,7,1000
+C041,Slow Motion,Viral,45,100
+C042,Final Cut Pro,Cinematic,30,750
+C043,"Text Animation, Motion Graphics",Viral,45,250
+C044,"VFX, Transitions",Viral,45,750
+C045,Text Animation,Fast-Cut,14,250
+C046,"Motion Graphics, Text Animation",Corporate,45,1000
+C047,Slow Motion,Vlog,30,750
+C048,"Color Grading, Transitions, Cinematic",Cinematic,45,500
+C049,Motion Graphics,Corporate,30,750
+C050,VFX,Fast-Cut,45,750
+C051,"VFX, Slow Motion, Final Cut Pro",Cinematic,14,250
+C052,"After Effects, VFX",Vlog,45,750
+C053,"Transitions, Slow Motion, After Effects",Cinematic,45,500
+C054,"Text Animation, VFX, Slow Motion",Corporate,30,250
+C055,"Text Animation, Premiere Pro, Transitions",Corporate,45,750
+C056,Premiere Pro,Fast-Cut,14,750
+C057,Premiere Pro,Vlog,14,1000
+C058,"Transitions, Cinematic",Vlog,45,500
+C059,"Color Grading, Cinematic",Corporate,14,250
+C060,Slow Motion,Vlog,30,500
+C061,"Color Grading, Motion Graphics, Transitions",Vlog,14,750
+C062,"Slow Motion, Premiere Pro",Corporate,45,500
+C063,Premiere Pro,Viral,14,500
+C064,"VFX, Transitions, After Effects",Vlog,30,250
+C065,"Text Animation, Transitions, Premiere Pro",Corporate,7,100
+C066,"Premiere Pro, Motion Graphics",Vlog,7,500
+C067,"Cinematic, VFX, Final Cut Pro",Fast-Cut,14,500
+C068,After Effects,Corporate,14,100
+C069,"Cinematic, Color Grading",Viral,7,750
+C070,Text Animation,Cinematic,7,100
+C071,"Color Grading, After Effects, VFX",Viral,30,500
+C072,"Color Grading, Text Animation",Viral,45,500
+C073,Transitions,Fast-Cut,45,100
+C074,"Cinematic, Final Cut Pro",Cinematic,7,500
+C075,Color Grading,Cinematic,14,100
+C076,"Slow Motion, Motion Graphics, Premiere Pro",Corporate,7,100
+C077,"Slow Motion, Color Grading, Motion Graphics",Cinematic,30,750
+C078,Text Animation,Vlog,45,500
+C079,"Text Animation, Cinematic",Viral,14,1000
+C080,"Motion Graphics, Transitions",Cinematic,14,100
+C081,"Final Cut Pro, Color Grading",Fast-Cut,30,750
+C082,"VFX, Color Grading, After Effects",Cinematic,7,250
+C083,"VFX, Motion Graphics",Viral,7,500
+C084,Color Grading,Vlog,7,750
+C085,After Effects,Cinematic,7,250
+C086,"Slow Motion, Final Cut Pro, Transitions",Cinematic,14,750
+C087,"Premiere Pro, Final Cut Pro",Vlog,30,1000
+C088,"Motion Graphics, Slow Motion",Cinematic,7,750
+C089,"Cinematic, Final Cut Pro, VFX",Cinematic,30,500
+C090,Slow Motion,Viral,14,100
+C091,"Motion Graphics, Color Grading",Viral,14,750
+C092,"Premiere Pro, Transitions, VFX",Corporate,30,500
+C093,"Motion Graphics, VFX",Fast-Cut,30,1000
+C094,Final Cut Pro,Fast-Cut,30,750
+C095,Motion Graphics,Viral,45,750
+C096,Motion Graphics,Viral,7,100
+C097,Final Cut Pro,Cinematic,30,1000
+C098,"VFX, Cinematic",Corporate,7,250
+C099,Final Cut Pro,Corporate,30,750

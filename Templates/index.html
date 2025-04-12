@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Matchmaking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --purple-200: #e9d8fd;
+            --purple-800: #553c9a;
+            --gradient-start: #7c3aed;
+            --gradient-end: #553c9a;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--purple-200) 0%, #f3e8ff 100%);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            padding-top: 2rem;
+        }
+        
+        .btn-custom {
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)) !important;
+            border: none !important;
+            color: white !important;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(124, 58, 237, 0.4);
+        }
+        
+        .badge-custom {
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)) !important;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+        
+        .result-card {
+            transition: all 0.3s ease;
+            border-radius: 16px;
+            border: none;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .result-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.15);
+        }
+        
+        .card {
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+        
+        .form-control, .form-select {
+            border-radius: 12px;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: var(--purple-800);
+            box-shadow: 0 0 0 0.25rem rgba(124, 58, 237, 0.25);
+        }
+        
+        .skill-badge {
+            background: rgba(124, 58, 237, 0.1) !important;
+            color: var(--gradient-start) !important;
+            border-radius: 20px;
+            padding: 6px 12px;
+            margin: 4px;
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .style-badge {
+            background: rgba(124, 58, 237, 0.15) !important;
+            color: var(--gradient-end) !important;
+            border-radius: 20px;
+            padding: 6px 12px;
+            font-weight: 500;
+        }
+
+        .experience-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            background: rgba(124, 58, 237, 0.05);
+            color: var(--gradient-start);
+        }
+
+        .card-title {
+            color: var(--gradient-start);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            color: var(--gradient-end);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            color: var (--gradient-end);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm mb-5">
+                    <div class="card-body">
+                        <h2 class="section-title">Find the Perfect Freelancer</h2>
+                        {% if error %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ error }}
+                        </div>
+                        {% endif %}
+                        <form method="POST" id="matchForm">
+                            <div class="mb-4">
+                                <label for="user_input" class="form-label">Describe your project requirements:</label>
+                                <textarea 
+                                    class="form-control" 
+                                    name="user_input" 
+                                    id="user_input" 
+                                    rows="4" 
+                                    placeholder="Example: Looking for an expert video editor skilled in After Effects and Motion Graphics for a corporate video with cinematic style..."
+                                    required>{{ user_input if user_input else "" }}</textarea>
+                            </div>
+                            <div class="mb-4">
+                                <label for="experience" class="form-label">Preferred Experience Level:</label>
+                                <select class="form-select" name="experience" id="experience">
+                                    <option value="">Any Experience Level</option>
+                                    {% for level in experience_levels %}
+                                    <option value="{{ level }}">{{ level }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-custom" id="submitBtn">
+                                Find Matching Freelancers
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                {% if top_freelancers is not none and not error %}
+                <h3 class="section-title">Top Matching Freelancers</h3>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    {% for index, row in top_freelancers.iterrows() %}
+                    <div class="col">
+                        <div class="result-card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ row['name'] }}</h5>
+                                <span class="experience-badge">{{ row['experience'] }} Level</span>
+                                <p class="card-text mb-3">
+                                    <strong>Skills:</strong><br>
+                                    {% for skill in row['skills'].split(',') %}
+                                    <span class="skill-badge">{{ skill.strip() }}</span>
+                                    {% endfor %}
+                                </p>
+                                <p class="card-text">
+                                    <strong>Style:</strong>
+                                    <span class="style-badge">{{ row['style'] }}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
